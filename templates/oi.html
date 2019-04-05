@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>oi.html</title>
+</head>
+<body>
+    <h1>Bem vindo {{ nome }} </h1>
+    <h2>Tabela de Notas:</h2>
+
+    <table border="2">
+        <tr>
+            <td>Disciplina</td>
+            <td>Nota 1</td>
+            <td>Nota 2</td>
+            <td>Nota 3</td>
+        </tr>
+        {% for d in disciplina %}
+            <tr>
+                <td><a href="/detalhar/{{ d[4] }}"> {{ d[0] }}</a></td>
+                <td>{{ d[1] }}</td>
+                <td>{{ d[2] }}</td>
+                <td>{{ d[3] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>
